@@ -38,9 +38,9 @@
 
                     <nav>
                         <ul class="header__navigation">
-                            <li class="header__navigation_rmz">
-                                <a href="">Все про РМЗ</a>
-                                <ul class="rmz-links">
+                            <li class="header__navigation_dropdown">
+                                Все про РМЗ <img src="svg/arrow_buttom.svg" alt="arrow">
+                                <ul class="hover-links">
                                     <li><a href="#">Діагностика</a></li>
                                     <li><a href="#">Види РМЗ</a></li>
                                     <li><a href="#">Методи лікування</a></li>
@@ -49,13 +49,26 @@
                                     <li><a href="#">Реабілітаційні центри</a></li>
                                     <li><a href="#">Паліативна допомога</a></li>
                                 </ul>
-
                             </li>
-                            <li class="header__navigation_financial"><a href="">Фінансові питання</a></li>
-                            <li class="header__navigation_legal"><a href="">Юридична допомога</a></li>
-                            <li class="header__navigation_psychological"><a href="">Психологічна допомога</a></li>
-                            <li class="header__navigation_about"><a href="">Про нас</a></li>
-                            <li class="header__navigation_lang"><a href="">Ua</a></li>
+
+                            <li class="header__navigation_dropdown"><a href="">Фінансові питання</a></li>
+                            <li class="header__navigation_dropdown"><a href="">Юридична допомога</a></li>
+                            <li class="header__navigation_dropdown"><a href="">Психологічна допомога</a></li>
+                            <li class="header__navigation_dropdown"> Про нас <img src="svg/arrow_buttom.svg"
+                                    alt="arrow">
+                                    <ul class="hover-links">
+                                        <li><a href="#">кто мы</a></li>
+                                        <li><a href="#">что мы</a></li>
+                                        <li><a href="#">где мы</a></li>
+                                    </ul>
+                            </li>
+                            <li class="header__navigation_dropdown"> Ua <img src="svg/arrow_buttom.svg" alt="arrow">
+                                <ul class="hover-links">
+                                    <li><a href="#">RU</a></li>
+                                    <li><a href="#">EN</a></li>
+                                    <li><a href="#">CH</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
 
@@ -67,6 +80,8 @@
         <!--------------- main ---------------------------->
         <main>
 
+            <!-- main big picture -->
+
             <section class="main">
                 <div class="container">
                     <div class="main-section">
@@ -76,20 +91,133 @@
                             «Рак молочної залози»</div>
 
                         <h1 class="main-section__heading heading">Надія<span>
-                               для кожного</span>
+                                для кожного</span>
                         </h1>
                     </div>
                 </div>
             </section>
+
+            <!-- slogan -->
+
             <div class="slogan flex-center">
                 <p>
                     «Ти не одна. Знайдемо відповіді на хвилюючі питання разом».
                 </p>
             </div>
 
+            <!-- cards -->
+
+            <div class="cards">
+                <section class="container">
+                    <h2 class="cards__heading heading">Все про рак молочної залози</h2>
+                    <div class="cards__items">
+                        <div class="cards__items_card">
+                            <div class="card__img">
+                                <img src="" alt="">
+                            </div>
+                            <span>Діагностика</span>
+                        </div>
+                        <div class="cards__items_card">
+                            <div class="card__img">
+                                <img src="" alt="">
+                            </div>
+                            <span>Клініки України</span>
+                        </div>
+                        <div class="cards__items_card">
+                            <div class="card__img">
+                                <img src="" alt="">
+                            </div>
+                            <span>Реабілітаційні центри</span>
+                        </div>
+                        <div class="cards__items_card">
+                            <div class="card__img">
+                                <img src="" alt="">
+                            </div>
+                            <span>Види РМЗ</span>
+                        </div>
+                        <div class="cards__items_card">
+                            <div class="card__img">
+                                <img src="" alt="">
+                            </div>
+                            <span>Закордонні клініки</span>
+                        </div>
+                        <div class="cards__items_card">
+                            <div class="card__img">
+                                <img src="" alt="">
+                            </div>
+                            <span>Паліативна допомога</span>
+                        </div>
+                        <div class="cards__items_card">
+                            <div class="card__img">
+                                <img src="" alt="">
+                            </div>
+                            <span>Методи лікування</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- swiper -->
+
+            <section class="swiper">
+                <div class="container">
+
+                    <h2 class="swiper__heading heading">Відповіді на маленькі «але»</h2>
+
+                    <div class="swiper__content">
+                        <div class="swiper__item">
+                            <div class="swiper__item_img"></div>
+                            <div class="swiper__item_text">Фінансові питання</div>
+                        </div>
+                        <div class="swiper__item">
+                            <div class="swiper__item_img"></div>
+                            <div class="swiper__item_text">Юридична допомога</div>
+
+                        </div>
+                        <div class="swiper__item">
+                            <div class="swiper__item_img"></div>
+                            <div class="swiper__item_text">Психологічна допомога</div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </main>
 
-        <footer class="footer">I am footer</footer>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="logo">
+                        <a href="index.html">logo</a>
+                    </div>
+                    <ul class="footer__links">
+                        <li><a href="#">Все про РМЗ</a></li>
+                        <li><a href="#">Фінансові питання</a></li>
+                        <li><a href="#">Психологічна допомога</a></li>
+                        <li><a href="#">Юридична допомога</a></li>
+                    </ul>
+                    <ul class="footer__links">
+                        <li><a href="#">Про нас</a></li>
+                        <li><a href="#">Наші партнери</a></li>
+                        <li><a href="#">Liki</a> <a href="">la</a></li>
+                    </ul>
+                    <ul class="footer__links">
+                        <li><a href="#">Контакти</a></li>
+                        <li>
+                            <a href="#">face</a>
+                            <a href="#">vib</a>
+                            <a href="#">tel</a>
+                            <a href="#">what</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="copirate">
+                    © 2021 Інформаційно-соціальний проект “Надія для кожного”
+                </div>
+            </div>
+        </footer>
     </div>
     <!-- scripts -->
     <script src="js/script.js"></script>

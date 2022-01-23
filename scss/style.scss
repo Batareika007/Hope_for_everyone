@@ -6,6 +6,7 @@
 .heading {
     font-family: 'Montserrat Alternates',
         sans-serif;
+    font-weight: 400;
 }
 
 .hide-scroll {
@@ -59,7 +60,6 @@ header {
 
 .header {
     z-index: 1000;
-    // margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,60 +69,90 @@ header {
         display: flex;
         gap: 1rem;
 
-        &_rmz a::after,
-        &_about a::after,
-        &_lang a::after {
-            position: relative;
-            content: '🎗';
+
+        .hover-links {
+            width: 0;
+            height: 0;
+            // opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 2.5rem;
+            line-height: 2rem;
+            // padding: 16px;
+            background-color: white;
+            box-shadow: 1px 1px 2px #FDA5BD;
+            border-radius: 4px;
+
+            li {
+                padding: 8px 16px;
+                transition: all ease-in-out 0.3s;
+            }
+
+            li:hover {
+                background-color: #FDA5BD;
+                color: white;
+            }
         }
 
-        &_rmz {
+        &_dropdown {
+
+            cursor: pointer;
+
             &:hover {
-                .rmz-links {
+
+                .hover-links {
+                    position: relative;
+                    right: 10rem;
+                    top: 0;
                     height: auto;
                     width: auto;
-                    transition: all linear 0.2s;
                     opacity: 1;
-                }
-
-            }
-
-
-            .rmz-links {
-                height: 0;
-                opacity: 0;
-                overflow: hidden;
-                position: absolute;
-                top: 2.5rem;
-                line-height: 2rem;
-                // padding: 16px;
-                background-color: white;
-                box-shadow: 1px 1px 2px #FDA5BD;
-                border-radius: 4px;
-
-                li {
-                    padding: 8px 16px;
-                    transition: 0.3s;
-                }
-
-                li:hover {
-                    background-color: #FDA5BD;
-                    color: white;
+                    display: block;
+                    // color: black;
                 }
             }
+
+
+            // .hover-links {
+            //     height: 0;
+            //     opacity: 0;
+            //     overflow: hidden;
+            //     position: absolute;
+            //     top: 2.5rem;
+            //     line-height: 2rem;
+            //     // padding: 16px;
+            //     background-color: white;
+            //     box-shadow: 1px 1px 2px #FDA5BD;
+            //     border-radius: 4px;
+
+            //     li {
+            //         padding: 8px 16px;
+            //         transition: all ease-in-out 0.3s;
+            //     }
+
+            //     li:hover {
+            //         background-color: #FDA5BD;
+            //         color: white;
+            //         // transition: all ease-in-out 0.6s;
+            //     }
+            // }
         }
 
         @media screen and (max-width:1024px) {
             flex-direction: column;
+            gap: 2rem;
             position: absolute;
             right: 0;
-            padding: 1rem;
+            top: 1rem;
+            // padding: 1rem;
             background-color: white;
-            border: 2px solid #FDA5BD;
+            border: 1px solid #FDA5BD;
 
-            .rmz-links {
+
+            .hover-links {
+                // display: flex;
                 position: relative;
-                top: 0;
+                top: 1rem;
                 box-shadow: none;
 
                 li {
@@ -142,7 +172,7 @@ main {
     // display: block;
     width: 100%;
     background: #ECEBEB;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 156px);
 
     &-section {
 
@@ -150,7 +180,8 @@ main {
 
         &__text {
             max-width: 423px;
-            margin-bottom: 96px;
+            margin-bottom: 150px;
+            font-size: 24px;
         }
 
         &__heading {
@@ -168,7 +199,7 @@ main {
 }
 
 .slogan {
-    // text-align: center;
+    text-align: center;
     background: #FDA5BD;
     color: white;
     font-style: italic;
@@ -177,8 +208,109 @@ main {
     height: 98px;
 }
 
+.cards {
+    padding: 129px 0;
+    // here will be background pink ribbles
+}
+
+.cards__heading {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 46px;
+}
+
+.cards__items {
+    display: flex;
+    gap: 52px 32px;
+    flex-wrap: wrap;
+    // justify-content: flex-start;
+    margin: 0 auto;
+
+    @media screen and (max-width:1170px) {
+        justify-content: center;
+    }
+
+    &_card {
+        display: inline-block;
+        min-width: 352px;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.6);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+            -1px -1px 2px rgba(105, 105, 105, 0.6);
+        backdrop-filter: blur(15px);
+        border-radius: 32px;
+        font-size: 18px;
+        text-align: center;
+        min-height: 180px;
+
+        .card__img {
+            height: 80px;
+            width: 80px;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.swiper {
+    margin-bottom: 128px;
+
+    &__heading {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 48px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 608px;
+
+    }
+
+    &__item {
+        text-align: center;
+
+        &:hover {
+            .swiper__item_img {
+                width: 544px;
+                height: 544px;
+            }
+        }
+
+        &_img {
+            transition: all 0.6s;
+            width: 254px;
+            height: 254px;
+            border: solid 1px black;
+            border-radius: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
 
 /* footer -------------------  */
+footer {
+    padding: 68px 0 8px;
+    background: #F3F3F5;
+}
+
 .footer {
-    margin: 0 auto;
+    padding-bottom: 75px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 90px;
+
+    &__links {
+        li:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.copirate {
+    text-align: center;
 }
