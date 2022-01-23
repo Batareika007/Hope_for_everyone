@@ -2,6 +2,12 @@
 @import 'global';
 @import 'colors';
 
+
+.heading {
+    font-family: 'Montserrat Alternates',
+        sans-serif;
+}
+
 .hide-scroll {
     -ms-overflow-style: none;
     /* IE and Edge */
@@ -28,28 +34,149 @@
 
 
 /* container max width -------------------  */
-.wrapper {
-    * {
-        padding: 24px 0;
-    }
-}
+
 
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
-    max-width: 1160px;
+    padding: 0 15px;
+    // width 1120 + 15px pading both size
+    max-width: 1150px;
+}
+
+header {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px #FDA5BD,
+        inset 0px 2px 2px #FDA5BD;
+}
+
+.logo {
+    flex: 0 0 160px;
+    width: 160px;
+    height: 60px;
+    box-shadow: inset 1px 1px 10px black;
 }
 
 .header {
-    margin: 0 auto;
+    z-index: 1000;
+    // margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+
+    &__navigation {
+        display: flex;
+        gap: 1rem;
+
+        &_rmz a::after,
+        &_about a::after,
+        &_lang a::after {
+            position: relative;
+            content: '🎗';
+        }
+
+        &_rmz {
+            &:hover {
+                .rmz-links {
+                    height: auto;
+                    width: auto;
+                    transition: all linear 0.2s;
+                    opacity: 1;
+                }
+
+            }
+
+
+            .rmz-links {
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 2.5rem;
+                line-height: 2rem;
+                // padding: 16px;
+                background-color: white;
+                box-shadow: 1px 1px 2px #FDA5BD;
+                border-radius: 4px;
+
+                li {
+                    padding: 8px 16px;
+                    transition: 0.3s;
+                }
+
+                li:hover {
+                    background-color: #FDA5BD;
+                    color: white;
+                }
+            }
+        }
+
+        @media screen and (max-width:1024px) {
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            padding: 1rem;
+            background-color: white;
+            border: 2px solid #FDA5BD;
+
+            .rmz-links {
+                position: relative;
+                top: 0;
+                box-shadow: none;
+
+                li {
+                    padding: 2px 0;
+                }
+            }
+        }
+    }
 }
 
 /* main -------------------  */
-.main {
-    margin: 0 auto;
+main {
     flex: 1 1 auto;
 }
+
+.main {
+    // display: block;
+    width: 100%;
+    background: #ECEBEB;
+    min-height: calc(100vh - 60px);
+
+    &-section {
+
+        padding-top: 4rem;
+
+        &__text {
+            max-width: 423px;
+            margin-bottom: 96px;
+        }
+
+        &__heading {
+            font-style: italic;
+            max-width: 530px;
+            font-size: 168px;
+            line-height: 3rem;
+            font-weight: 400;
+
+            span {
+                font-size: 80px;
+            }
+        }
+    }
+}
+
+.slogan {
+    // text-align: center;
+    background: #FDA5BD;
+    color: white;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 32px;
+    height: 98px;
+}
+
 
 /* footer -------------------  */
 .footer {
