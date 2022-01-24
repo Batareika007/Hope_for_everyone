@@ -509,8 +509,6 @@ header {
           flex: 0 0 160px;
   width: 160px;
   height: 60px;
-  -webkit-box-shadow: inset 1px 1px 10px black;
-          box-shadow: inset 1px 1px 10px black;
 }
 
 .header {
@@ -607,6 +605,10 @@ main {
   width: 100%;
   background: #ECEBEB;
   min-height: calc(100vh - 156px);
+  background-image: url(../images/main-background.png);
+  background-repeat: no-repeat;
+  background-position: 80% bottom;
+  background-size: calc(50vw);
 }
 
 .main-section {
@@ -643,6 +645,9 @@ main {
 
 .cards {
   padding: 129px 0;
+  background-image: url(../images/cards-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .cards__heading {
@@ -656,10 +661,13 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 52px 32px;
+  gap: 8px 32px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 1170px) {
@@ -671,24 +679,48 @@ main {
 }
 
 .cards__items_card {
-  display: inline-block;
   min-width: 352px;
   padding: 22px;
   background: rgba(255, 255, 255, 0.6);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -1px -1px 2px rgba(105, 105, 105, 0.6);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -1px -1px 2px rgba(105, 105, 105, 0.6);
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   border-radius: 32px;
   font-size: 18px;
   text-align: center;
-  min-height: 180px;
+  min-height: 160px;
+  margin: 16px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cards__items_card:hover {
+  font-weight: 700;
+  font-size: 24px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  min-height: 192px;
+  margin: 0;
+  -webkit-box-shadow: 4px 4px 4px #FDA5BD, inset 4px 4px 8px #FDA5BD;
+          box-shadow: 4px 4px 4px #FDA5BD, inset 4px 4px 8px #FDA5BD;
+}
+
+.cards__items_card:hover .card__img {
+  height: 96px;
+  width: 96px;
 }
 
 .cards__items_card .card__img {
   height: 80px;
   width: 80px;
-  margin-bottom: 8px;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cards__items_card .card__img img {
+  width: 100%;
 }
 
 .swiper {
@@ -727,9 +759,13 @@ main {
   transition: all 0.6s;
   width: 254px;
   height: 254px;
-  border: solid 1px black;
   border-radius: 100%;
   margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.swiper__item_img img {
+  height: 100%;
 }
 
 /* footer -------------------  */

@@ -55,7 +55,6 @@ header {
     flex: 0 0 160px;
     width: 160px;
     height: 60px;
-    box-shadow: inset 1px 1px 10px black;
 }
 
 .header {
@@ -171,6 +170,11 @@ main {
     width: 100%;
     background: #ECEBEB;
     min-height: calc(100vh - 156px);
+    background-image: url(../images/main-background.png);
+    background-repeat: no-repeat;
+    background-position: 80% bottom;
+    background-size: calc(50vw);
+    // background-attachment: local;
 
     &-section {
 
@@ -208,7 +212,9 @@ main {
 
 .cards {
     padding: 129px 0;
-    // here will be background pink ribbles
+    background-image: url(../images/cards-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .cards__heading {
@@ -220,35 +226,60 @@ main {
 
 .cards__items {
     display: flex;
-    gap: 52px 32px;
+    gap: 8px 32px;
     flex-wrap: wrap;
     // justify-content: flex-start;
     margin: 0 auto;
+    align-items: center;
 
     @media screen and (max-width:1170px) {
         justify-content: center;
     }
 
     &_card {
-        display: inline-block;
         min-width: 352px;
         padding: 22px;
         background: rgba(255, 255, 255, 0.6);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
-            -1px -1px 2px rgba(105, 105, 105, 0.6);
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+        // -1px -1px 2px rgba(105, 105, 105, 0.6);
         backdrop-filter: blur(15px);
         border-radius: 32px;
         font-size: 18px;
         text-align: center;
-        min-height: 180px;
+        min-height: 160px;
+        margin: 16px 0;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            font-weight: 700;
+            font-size: 24px;
+            padding-top: 26px;
+            padding-bottom: 26px;
+            min-height: 192px;
+            margin: 0;
+            box-shadow: 4px 4px 4px #FDA5BD,
+                inset 4px 4px 8px #FDA5BD;
+
+            .card__img {
+                height: 96px;
+                width: 96px;
+            }
+        }
 
         .card__img {
             height: 80px;
             width: 80px;
-            margin-bottom: 8px;
+            margin: 8px auto;
+            transition: all 0.3s ease-in-out;
+
+            img {
+                width: 100%;
+            }
         }
     }
 }
+
+// swiper
 
 .swiper {
     margin-bottom: 128px;
@@ -259,6 +290,8 @@ main {
         margin-bottom: 48px;
     }
 
+
+    //  ============  main swiper content
     &__content {
         display: flex;
         justify-content: space-around;
@@ -281,9 +314,13 @@ main {
             transition: all 0.6s;
             width: 254px;
             height: 254px;
-            border: solid 1px black;
             border-radius: 100%;
             margin-bottom: 1rem;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+            }
         }
     }
 }
