@@ -73,10 +73,10 @@ header {
         .hover-links {
             width: 0;
             height: 0;
-            // opacity: 0;
+            opacity: 0;
             overflow: hidden;
             position: absolute;
-            top: 2.5rem;
+            top: 10px;
             line-height: 2rem;
             // padding: 16px;
             background-color: white;
@@ -101,14 +101,12 @@ header {
             &:hover {
 
                 .hover-links {
-                    position: relative;
-                    right: 10rem;
-                    top: 0;
+                    position: absolute;
+                    top: 2.5rem;
                     height: auto;
                     width: auto;
                     opacity: 1;
                     display: block;
-                    // color: black;
                 }
             }
 
