@@ -512,7 +512,6 @@ header {
 }
 
 .header {
-  z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,30 +569,6 @@ header {
   display: block;
 }
 
-@media screen and (max-width: 1024px) {
-  .header__navigation {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 2rem;
-    position: absolute;
-    right: 0;
-    top: 1rem;
-    background-color: white;
-    border: 1px solid #FDA5BD;
-  }
-  .header__navigation .hover-links {
-    position: relative;
-    top: 1rem;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  .header__navigation .hover-links li {
-    padding: 2px 0;
-  }
-}
-
 /* main -------------------  */
 main {
   -webkit-box-flex: 1;
@@ -608,7 +583,7 @@ main {
   background-image: url(../images/main-background.png);
   background-repeat: no-repeat;
   background-position: 80% bottom;
-  background-size: calc(50vw);
+  background-size: 50vw;
 }
 
 .main-section {
@@ -623,14 +598,16 @@ main {
 
 .main-section__heading {
   font-style: italic;
-  max-width: 530px;
-  font-size: 168px;
-  line-height: 3rem;
   font-weight: 400;
 }
 
+.main-section__heading span:first-child {
+  font-size: 11vw;
+}
+
 .main-section__heading span {
-  font-size: 80px;
+  display: block;
+  font-size: 4.7vw;
 }
 
 .slogan {
@@ -639,8 +616,8 @@ main {
   color: white;
   font-style: italic;
   font-weight: 500;
-  font-size: 32px;
-  height: 98px;
+  font-size: 2rem;
+  line-height: 6rem;
 }
 
 .cards {
@@ -679,6 +656,7 @@ main {
 }
 
 .cards__items_card {
+  cursor: pointer;
   min-width: 352px;
   padding: 22px;
   background: rgba(255, 255, 255, 0.6);
@@ -691,8 +669,8 @@ main {
   text-align: center;
   min-height: 160px;
   margin: 16px 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .cards__items_card:hover {
@@ -715,8 +693,8 @@ main {
   height: 80px;
   width: 80px;
   margin: 8px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .cards__items_card .card__img img {
@@ -789,6 +767,18 @@ footer {
 
 .footer__links li:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.footer__links .partners:not(:last-child) {
+  margin-right: 32px;
+}
+
+.footer__links .partners img {
+  vertical-align: top;
+}
+
+.footer__links .social:not(:last-child) {
+  margin-right: 8px;
 }
 
 .copirate {

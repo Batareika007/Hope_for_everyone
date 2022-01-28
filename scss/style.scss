@@ -58,7 +58,6 @@ header {
 }
 
 .header {
-    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -108,56 +107,9 @@ header {
                     display: block;
                 }
             }
-
-
-            // .hover-links {
-            //     height: 0;
-            //     opacity: 0;
-            //     overflow: hidden;
-            //     position: absolute;
-            //     top: 2.5rem;
-            //     line-height: 2rem;
-            //     // padding: 16px;
-            //     background-color: white;
-            //     box-shadow: 1px 1px 2px #FDA5BD;
-            //     border-radius: 4px;
-
-            //     li {
-            //         padding: 8px 16px;
-            //         transition: all ease-in-out 0.3s;
-            //     }
-
-            //     li:hover {
-            //         background-color: #FDA5BD;
-            //         color: white;
-            //         // transition: all ease-in-out 0.6s;
-            //     }
-            // }
-        }
-
-        @media screen and (max-width:1024px) {
-            flex-direction: column;
-            gap: 2rem;
-            position: absolute;
-            right: 0;
-            top: 1rem;
-            // padding: 1rem;
-            background-color: white;
-            border: 1px solid #FDA5BD;
-
-
-            .hover-links {
-                // display: flex;
-                position: relative;
-                top: 1rem;
-                box-shadow: none;
-
-                li {
-                    padding: 2px 0;
-                }
-            }
         }
     }
+
 }
 
 /* main -------------------  */
@@ -170,11 +122,11 @@ main {
     width: 100%;
     background: #ECEBEB;
     min-height: calc(100vh - 156px);
+    // min-height: 50vw;
     background-image: url(../images/main-background.png);
     background-repeat: no-repeat;
     background-position: 80% bottom;
-    background-size: calc(50vw);
-    // background-attachment: local;
+    background-size: 50vw;
 
     &-section {
 
@@ -188,13 +140,15 @@ main {
 
         &__heading {
             font-style: italic;
-            max-width: 530px;
-            font-size: 168px;
-            line-height: 3rem;
             font-weight: 400;
 
+            span:first-child {
+                font-size: 11vw;
+            }
+
             span {
-                font-size: 80px;
+                display: block;
+                font-size: 4.7vw;
             }
         }
     }
@@ -206,8 +160,8 @@ main {
     color: white;
     font-style: italic;
     font-weight: 500;
-    font-size: 32px;
-    height: 98px;
+    font-size: 2rem;
+    line-height: 6rem;
 }
 
 .cards {
@@ -215,6 +169,7 @@ main {
     background-image: url(../images/cards-bg.png);
     background-repeat: no-repeat;
     background-position: center center;
+    // background-attachment: fixed;
 }
 
 .cards__heading {
@@ -237,6 +192,7 @@ main {
     }
 
     &_card {
+        cursor: pointer;
         min-width: 352px;
         padding: 22px;
         background: rgba(255, 255, 255, 0.6);
@@ -248,7 +204,7 @@ main {
         text-align: center;
         min-height: 160px;
         margin: 16px 0;
-        transition: all 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
 
         &:hover {
             font-weight: 700;
@@ -270,7 +226,7 @@ main {
             height: 80px;
             width: 80px;
             margin: 8px auto;
-            transition: all 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
 
             img {
                 width: 100%;
@@ -342,6 +298,21 @@ footer {
     &__links {
         li:not(:last-child) {
             margin-bottom: 1rem;
+        }
+
+        .partners {
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+
+            img {
+                vertical-align: top;
+
+            }
+        }
+
+        .social:not(:last-child) {
+            margin-right: 8px;
         }
     }
 }
