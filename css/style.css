@@ -579,20 +579,16 @@ main {
 .main {
   width: 100%;
   background: #ECEBEB;
-  min-height: calc(100vh - 156px);
   background-image: url(../images/main-background.png);
   background-repeat: no-repeat;
   background-position: 80% bottom;
   background-size: 50vw;
-}
-
-.main-section {
-  padding-top: 4rem;
+  padding: 68px 0 248px;
 }
 
 .main-section__text {
   max-width: 423px;
-  margin-bottom: 150px;
+  margin-bottom: 96px;
   font-size: 24px;
 }
 
@@ -602,12 +598,13 @@ main {
 }
 
 .main-section__heading span:first-child {
-  font-size: 11vw;
+  font-weight: 500;
+  font-size: 168px;
 }
 
 .main-section__heading span {
   display: block;
-  font-size: 4.7vw;
+  font-size: 80px;
 }
 
 .slogan {

@@ -118,23 +118,19 @@ main {
 }
 
 .main {
-    // display: block;
     width: 100%;
     background: #ECEBEB;
-    min-height: calc(100vh - 156px);
-    // min-height: 50vw;
+    // min-height: calc(100vh - 156px);
     background-image: url(../images/main-background.png);
     background-repeat: no-repeat;
     background-position: 80% bottom;
     background-size: 50vw;
+    padding: 68px 0 248px;
 
     &-section {
-
-        padding-top: 4rem;
-
         &__text {
             max-width: 423px;
-            margin-bottom: 150px;
+            margin-bottom: 96px;
             font-size: 24px;
         }
 
@@ -143,12 +139,13 @@ main {
             font-weight: 400;
 
             span:first-child {
-                font-size: 11vw;
+                font-weight: 500;
+                font-size: 168px;
             }
 
             span {
                 display: block;
-                font-size: 4.7vw;
+                font-size: 80px;
             }
         }
     }
