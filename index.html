@@ -22,53 +22,56 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- test preloader -->
+    <style>
+        /* Paste this css to your style sheet file or under head tag */
+        /* This only works with JavaScript, 
+if it's not present, don't show loader */
+        .no-js #loader {
+            display: none;
+        }
+
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(images/loader-128x/Preloader_2.gif) center no-repeat #fff;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script>
+        //paste this code under head tag or in a seperate js file.
+        // Wait for window load
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+    <!-- test preloader -->
 
     <title>Надія для кожного</title>
 
 </head>
 
 <body>
+    <!-- test pre loader -->
+    <div class="se-pre-con"></div>
+    <!-- end pre loader -->
     <div class="wrapper">
-        <header>
-            <div class="container">
-                <div class="header">
-
-                    <div class="header__logo logo">
-                        <a href="index.html"><img src="icons/logo.png" alt="logo"></a>
-                    </div>
-
-                    <nav>
-                        <ul class="header__navigation">
-                            <li class="header__navigation_dropdown">
-
-                                Все про РМЗ <img src="svg/arrow_buttom.svg" alt="arrow">
-
-                                <ul class="hover-links">
-                                    <li><a href="#">Діагностика</a></li>
-                                    <li><a href="#">Види РМЗ</a></li>
-                                    <li><a href="#">Методи лікування</a></li>
-                                    <li><a href="#">Клініки України</a></li>
-                                    <li><a href="#">Закордонні клініки</a></li>
-                                    <li><a href="#">Реабілітаційні центри</a></li>
-                                    <li><a href="#">Паліативна допомога</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="header__navigation_dropdown"><a href="">Фінансові питання</a></li>
-                            <li class="header__navigation_dropdown"><a href="">Юридична допомога</a></li>
-                            <li class="header__navigation_dropdown"><a href="">Психологічна допомога</a></li>
-                            <li class="header__navigation_dropdown"> Про нас</li>
-                            <li class="header__navigation_dropdown"> Ua <img src="svg/arrow_buttom.svg" alt="arrow">
-                                <ul class="hover-links">
-                                    <li><a href="#">RU</a></li>
-                                    <li><a href="#">EN</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-
-                </div>
-            </div>
+        <header id="header">
         </header>
 
 
@@ -86,7 +89,7 @@
                             «Рак молочної залози»</div>
 
                         <h1 class="main-section__heading heading">
-                            <span>Надія</span> 
+                            <span>Надія</span>
                             <span>для кожного</span>
                         </h1>
                     </div>
@@ -193,43 +196,18 @@
             </section>
         </main>
 
-        <footer>
-            <div class="container">
-                <div class="footer">
-                    <div class="logo">
-                        <a href="index.html"><img src="icons/logo.png" alt="logo"></a>
-                    </div>
-                    <ul class="footer__links">
-                        <li><a href="#">Все про РМЗ</a></li>
-                        <li><a href="#">Фінансові питання</a></li>
-                        <li><a href="#">Психологічна допомога</a></li>
-                        <li><a href="#">Юридична допомога</a></li>
-                    </ul>
-                    <ul class="footer__links">
-                        <li><a href="#">Про нас</a></li>
-                        <li><a href="#">Наші партнери</a></li>
-                        <li>
-                            <a href="#" class="partners"><img src="icons/liki-control.png" alt=""></a>
-                            <a href="#" class="partners"><img src="icons/lavita.png" alt=""></a>
-                        </li>
-                    </ul>
-                    <ul class="footer__links">
-                        <li><a href="#">Контакти</a></li>
-                        <li>
-                            <a href="#" class="social"><img src="svg/facebook.svg" alt="facebook"></a>
-                            <a href="#" class="social"><img src="svg/viber.svg" alt="viber"></a>
-                            <a href="#" class="social"><img src="svg/telegram.svg" alt="telegram"></a>
-                            <a href="#" class="social"><img src="svg/whatsapp.svg" alt="WhatsApp"></a>
-                        </li>
-                    </ul>
-                </div>
+        <footer id="footer">
 
-                <div class="copirate">
-                    © 2021 Інформаційно-соціальний проект “Надія для кожного”
-                </div>
-            </div>
         </footer>
     </div>
+    <style>
+        .content {
+            background: url(http://smallenvelop.com/wp-content/uploads/2014/08/simple-pre-loader.jpg
+) center no-repeat;
+            background-size: 100%;
+            width: 100%;
+        }
+    </style>
     <!-- scripts -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
