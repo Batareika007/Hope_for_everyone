@@ -67,44 +67,54 @@ header {
         display: flex;
         gap: 1rem;
 
+        &_link {
+            transition: all ease-in-out 0.3s;
 
-        .hover-links {
-            width: 0;
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            position: absolute;
-            top: 10px;
-            line-height: 2rem;
-            // padding: 16px;
-            background-color: white;
-            box-shadow: 1px 1px 2px #FDA5BD;
-            border-radius: 4px;
-
-            li {
-                padding: 8px 16px;
+            &:hover {
                 transition: all ease-in-out 0.3s;
-            }
-
-            li:hover {
-                background-color: #FDA5BD;
-                color: white;
+                color: #FDA5BD;
             }
         }
 
-        &_dropdown {
+        .hover-links {
+            width: auto;
+            height: auto;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 4rem;
+            background-color: white;
+            box-shadow: 1px 1px 2px #FDA5BD;
+            border-radius: 4px;
+            transition: all ease-in-out 0.3s;
 
-            cursor: pointer;
+            li {
+                a {
+                    display: block;
+                    line-height: 3.1rem;
+                    padding: 0px 20px;
+                }
+
+                transition: all ease-in-out 0.5s;
+
+                &:hover {
+                    transition: all ease-in-out 0.3s;
+                    background-color: #FDA5BD;
+                    color: white;
+                }
+            }
+
+        }
+
+        &_dropdown {
+            cursor: default;
 
             &:hover {
+                transition: all ease-in-out 5s;
 
                 .hover-links {
-                    position: absolute;
-                    top: 2.5rem;
-                    height: auto;
-                    width: auto;
+                    transition: all ease-in-out 0.3s;
                     opacity: 1;
-                    display: block;
                 }
             }
         }

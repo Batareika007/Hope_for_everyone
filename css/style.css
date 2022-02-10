@@ -531,42 +531,63 @@ header {
   gap: 1rem;
 }
 
-.header__navigation .hover-links {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 10px;
-  line-height: 2rem;
-  background-color: white;
-  -webkit-box-shadow: 1px 1px 2px #FDA5BD;
-          box-shadow: 1px 1px 2px #FDA5BD;
-  border-radius: 4px;
-}
-
-.header__navigation .hover-links li {
-  padding: 8px 16px;
+.header__navigation_link {
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
 
+.header__navigation_link:hover {
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  color: #FDA5BD;
+}
+
+.header__navigation .hover-links {
+  width: auto;
+  height: auto;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 4rem;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 2px #FDA5BD;
+          box-shadow: 1px 1px 2px #FDA5BD;
+  border-radius: 4px;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.header__navigation .hover-links li {
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.header__navigation .hover-links li a {
+  display: block;
+  line-height: 3.1rem;
+  padding: 0px 20px;
+}
+
 .header__navigation .hover-links li:hover {
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
   background-color: #FDA5BD;
   color: white;
 }
 
 .header__navigation_dropdown {
-  cursor: pointer;
+  cursor: default;
+}
+
+.header__navigation_dropdown:hover {
+  -webkit-transition: all ease-in-out 5s;
+  transition: all ease-in-out 5s;
 }
 
 .header__navigation_dropdown:hover .hover-links {
-  position: absolute;
-  top: 2.5rem;
-  height: auto;
-  width: auto;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
   opacity: 1;
-  display: block;
 }
 
 /* main -------------------  */
