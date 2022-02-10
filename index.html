@@ -17,18 +17,16 @@
     <!-- links to CSS  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
-        
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- test preloader -->
+    <!--! test preloader -->
     <style>
         /* Paste this css to your style sheet file or under head tag */
         /* This only works with JavaScript, 
-if it's not present, don't show loader */
+            if it's not present, don't show loader */
         .no-js #loader {
             display: none;
         }
@@ -50,18 +48,12 @@ if it's not present, don't show loader */
             background: url(images/loader-128x/Preloader_2.gif) center no-repeat #fff;
         }
     </style>
+    <!-- <script src="js/jquery3.6.js"></script> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-    <script>
-        //paste this code under head tag or in a seperate js file.
-        // Wait for window load
-        $(window).load(function () {
-            // Animate loader off screen
-            $(".se-pre-con").fadeOut("slow");;
-        });
-    </script>
-    <!-- test preloader -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script> -->
+    
+    <!-- !test preloader end -->
 
     <title>Надія для кожного</title>
 
@@ -71,6 +63,8 @@ if it's not present, don't show loader */
     <!-- test pre loader -->
     <div class="se-pre-con"></div>
     <!-- end pre loader -->
+
+
     <div class="wrapper">
         <header id="header">
         </header>
@@ -204,6 +198,14 @@ if it's not present, don't show loader */
     <!-- scripts -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        //paste this code under head tag or in a seperate js file.
+        // Wait for window load
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
 </body>
 
 </html>
