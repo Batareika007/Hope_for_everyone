@@ -1,2 +1,4 @@
-$("#header").load("../assets/header.html");
-$("#footer").load("../assets/footer.html");
+$(function() {
+    $("#header").load("../assets/header.html");
+    $("#footer").load("../assets/footer.html");
+})
