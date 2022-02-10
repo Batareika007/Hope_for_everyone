@@ -597,6 +597,10 @@ main {
           flex: 1 1 auto;
 }
 
+main h1 {
+  margin-top: 2rem;
+}
+
 .main {
   width: 100%;
   background: #ECEBEB;
