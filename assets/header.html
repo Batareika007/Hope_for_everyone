@@ -1,41 +1,51 @@
-   <div class="container">
-       <div class="header">
-
-           <div class="header__logo logo">
-               <!-- ! change the href to index afet '../'  -->
-               <a href="../Hope_for_everyone"><img src="icons/logo.png" alt="logo"></a>
-           </div>
-
-           <nav>
-               <ul class="header__navigation">
-                   <li class="header__navigation_dropdown">
-
-                       Все про РМЗ <img src="svg/arrow_buttom.svg" alt="arrow">
-
-                       <ul class="hover-links">
-                           <li><a href="diagnosis.html">Діагностика</a></li>
-                           <li><a href="rmz_types.html">Види РМЗ</a></li>
-                           <li><a href="treatment_methods.html">Методи лікування</a></li>
-                           <li><a href="ukrain_clinics.html">Клініки України</a></li>
-                           <li><a href="foreign_clinics.html">Закордонні клініки</a></li>
-                           <li><a href="rehabilitation_centers.html">Реабілітаційні центри</a></li>
-                           <li><a href="palliative_care.html">Паліативна допомога</a></li>
-                       </ul>
-                   </li>
-
-                   <li class="header__navigation_link"><a href="financial_issues.html">Фінансові питання</a></li>
-                   <li class="header__navigation_link"><a href="legal_help.html">Юридична допомога</a></li>
-                   <li class="header__navigation_link"><a href="psychological_help.html">Психологічна допомога</a></li>
-                   <li class="header__navigation_link"><a href="about.html"> Про нас</a></li>
-                   
-                   <li class="header__navigation_dropdown"> Ua <img src="svg/arrow_buttom.svg" alt="arrow">
-                       <ul class="hover-links">
-                           <li><a href="#">RU</a></li>
-                           <li><a href="#">EN</a></li>
-                       </ul>
-                   </li>
-               </ul>
-           </nav>
-
+   <div class="container header">
+       <div class="header__logo logo">
+           <!-- ! change the href to index afet '../'  -->
+           <a href="../Hope_for_everyone"><img src="icons/logo.png" alt="logo"></a>
        </div>
+
+       <nav>
+           <div class="header__nav">
+               <ul class="header__nav_dropdown dropdown">
+                   <li class="dropdown__button">Все про РМЗ <img src="svg/arrow_buttom.svg" alt="arrow"></li>
+                   <ul class="dropdown__list" id="header__list">
+                       <li class="dropdown__list_item"><a href="diagnosis.html">Діагностика</a></li>
+                       <li class="dropdown__list_item"><a href="rmz_types.html">Види РМЗ</a></li>
+                       <li class="dropdown__list_item"><a href="treatment_methods.html">Методи лікування</a></li>
+                       <li class="dropdown__list_item"><a href="ukrain_clinics.html">Клініки України</a></li>
+                       <li class="dropdown__list_item"><a href="foreign_clinics.html">Закордонні клініки</a></li>
+                       <li class="dropdown__list_item"><a href="rehabilitation_centers.html">Реабілітаційні центри</a>
+                       </li>
+                       <li class="dropdown__list_item"><a href="palliative_care.html">Паліативна допомога</a></li>
+                   </ul>
+               </ul>
+
+               <a class="header__nav_link" href="financial_issues.html">Фінансові питання</a>
+               <a class="header__nav_link" href="legal_help.html">Юридична допомога</a>
+               <a class="header__nav_link" href="psychological_help.html">Психологічна допомога</a>
+               <a class="header__nav_link" href="about.html"> Про нас</a>
+
+               <ul class="header__nav_dropdown dropdown leng"> Ua <img src="svg/arrow_buttom.svg" alt="arrow">
+
+                   <ul class="dropdown__list" id="leng__list">
+                       <li class="dropdown__list_item"><a href="#">RU</a></li>
+                       <li class="dropdown__list_item"><a href="#">EN</a></li>
+                   </ul>
+
+               </ul>
+
+           </div>
+       </nav>
+
+
    </div>
+
+   <script>
+       $('.dropdown__button').click(function () {
+           $('#header__list').toggle();
+           
+       });
+       $('.leng').click(function () {
+           $('#leng__list').toggle();
+       });
+   </script>
